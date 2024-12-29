@@ -55,7 +55,7 @@ const contador = setInterval(function() {
     let mm = Math.floor(diff / (1000 * 3600 * 24 * 30));;
     let dia = Math.floor(diff / (1000 * 3600 * 24));
     let h = Math.floor(diff % (1000 * 3600 * 24) /  (1000 * 3600));
-    let min = Math.floor(diff % (1000 * 3600) / (1000 * 36));
+    let min = Math.floor(diff % (1000 * 3600) / (1000 * 60));
     let s = Math.floor(diff % (1000 * 60) / 1000);
     
     // contagem de bodas
