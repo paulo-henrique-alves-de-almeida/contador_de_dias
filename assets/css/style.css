@@ -162,3 +162,10 @@ body::-webkit-scrollbar-thumb {
 .obs {
     color: var(--roxo-claro);
 }
+
+/* media queries */
+@media (max-width: 730px) {
+    .tempos {
+        flex-direction: column;
+    }
+}
