@@ -29,15 +29,18 @@ h1 {
     font-size: 2rem;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.modal-info::-webkit-scrollbar {
     width: 10px;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+.modal-info::-webkit-scrollbar-track {
     background-color: #12121200;
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+.modal-info::-webkit-scrollbar-thumb {
     background: var(--roxo-claro);
     border-radius: 5px;
 }
@@ -101,6 +104,45 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
 }
 
+#btn-info {
+    color: var(--roxo-claro);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modal-info {
+    width: 90vw;
+    height: 80vh;
+    border-radius: 15px;
+    background-color: #262830;
+    color: white;
+    margin: auto auto;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, .5);
+    transition: all .3s ease;
+}
+
+.modal-info::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+#btn-fechar-info {
+    color: rgb(206, 37, 37);
+    margin: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-info h2 {
+    text-align: center;
+    color: var(--roxo-claro);
+}
+
+.modal-info ul {
+    text-align: center;
+    margin-block: 1rem;
+    line-height: 20pt;
+}
+
 .bodas {
     color: var(--branco);
 }
@@ -160,6 +202,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .obs {
+    font-weight: bold;
     color: var(--roxo-claro);
 }
 

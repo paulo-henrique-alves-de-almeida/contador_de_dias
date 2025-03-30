@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador de Dias</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="assets/imagens/icone/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -48,7 +49,7 @@
                 </div>
                 
                 <div class="swiper-slide"> <!-- 8 -->
-                    <img src="assets/imagens/nos/8.jpg" alt="imagem com meu amor">
+                    <img src="assets/imagens/nos/8.jpeg" alt="imagem com meu amor">
                 </div>
                 
                 <div class="swiper-slide"> <!-- 9 -->
@@ -60,7 +61,7 @@
                 </div>
                 
                 <div class="swiper-slide"> <!-- 11 -->
-                    <img src="assets/imagens/nos/11.jpg" alt="imagem com meu amor">
+                    <img src="assets/imagens/nos/11.jpeg" alt="imagem com meu amor">
                 </div>
                 
                 <div class="swiper-slide"> <!-- 12 -->
@@ -100,7 +101,7 @@
                 </div>
                 
                 <div class="swiper-slide"> <!-- 21 -->
-                    <img src="assets/imagens/nos/21.jpg" alt="imagem com meu amor">
+                    <img src="assets/imagens/nos/21.jpeg" alt="imagem com meu amor">
                 </div>
                 
                 <div class="swiper-slide"> <!-- 22 -->
@@ -116,7 +117,7 @@
                 </div>
                 
                 <div class="swiper-slide"> <!-- 25 -->
-                    <img src="assets/imagens/nos/25.jpg" alt="imagem com meu amor">
+                    <img src="assets/imagens/nos/25.jpeg" alt="imagem com meu amor">
                 </div>
 
             </div> <!-- swiper-wrapper -->
@@ -126,7 +127,137 @@
     </section> <!-- fotos -->
 
     <section class="contador">
-        <p class="bodas"><span class="obs">Bodas:</span> <span id="bodas">asd</span></p>
+        <p class="bodas">
+            <i id="btn-info" class="fa-solid fa-circle-question"></i>
+            <span class="obs">Bodas:</span> 
+            <span id="bodas">Bodas de</span>
+        </p>
+
+        <dialog class="modal-info">
+            <i id="btn-fechar-info" class="fa-solid fa-xmark fa-2xl"></i>
+
+            <h2>Bodas de Meses</h2>
+
+            <ul>
+                <li>1 - Bodas de Beijinho
+                <li>2 - Bodas de Sorvete
+                <li>3 - Bodas de Algodão Doce
+                <li>4 - Bodas de Pipocas
+                <li>5 - Bodas de Chocolate
+                <li>6 - Bodas de Plumas
+                <li>7 - Bodas de Purpurina
+                <li>8 - Bodas de Pompons
+                <li>9 - Bodas de Maternidade
+                <li>10 - Bodas de Pintinhos
+                <li>11 - Bodas de Chicletes
+            </ul>
+            
+            <h2>Bodas de Anos</h2>
+
+            <ul>
+                <li>1 – Bodas de Papel</li>
+                <li>2 – Bodas de Algodão</li>
+                <li>3 – Bodas de Trigo</li>
+                <li>4 – Bodas de Linho</li>
+                <li>5 – Bodas de Madeira ou Ferro</li>
+                <li>6 – Bodas de Perfume ou Açúcar</li>
+                <li>7 – Bodas de Latão ou Lã</li>
+                <li>8 – Bodas de Papoula ou Barro</li>
+                <li>9 – Bodas de Cerâmica ou Vime</li>
+                <li>10 – Bodas de Estanho</li>
+                <li>11 – Bodas de Aço</li>
+                <li>12 – Bodas de Seda ou Ônix</li>
+                <li>13 – Bodas de Linho ou Renda</li>
+                <li>14 – Bodas de Marfim</li>
+                <li>15 – Bodas de Cristal</li>
+                <li>16 – Bodas de Turmalina</li>
+                <li>17 – Bodas de Rosa</li>
+                <li>18 – Bodas de Turquesa</li>
+                <li>19 – Bodas de Cretone ou Água-marinha</li>
+                <li>20 – Bodas de Porcelana</li>
+                <li>21 – Bodas de Zircão</li>
+                <li>22 – Bodas de Louça</li>
+                <li>23 – Bodas de Palha</li>
+                <li>24 – Bodas de Opala</li>
+                <li>25 – Bodas de Prata</li>
+                <li>26 – Bodas de Alexandrita</li>
+                <li>27 – Bodas de Crisopázio</li>
+                <li>28 – Bodas de Hematita</li>
+                <li>29 – Bodas de Erva</li>
+                <li>30 – Bodas de Pérola</li>
+                <li>31 – Bodas de Nácar</li>
+                <li>32 – Bodas de Pinho</li>
+                <li>33 – Bodas de Crizo</li>
+                <li>34 – Bodas de Oliveira</li>
+                <li>35 – Bodas de Coral</li>
+                <li>36 – Bodas de Cedro</li>
+                <li>37 – Bodas de Aventurina</li>
+                <li>38 – Bodas de Carvalho</li>
+                <li>39 – Bodas de Mármore</li>
+                <li>40 – Bodas de Esmeralda</li>
+                <li>41 – Bodas de casamento de Seda</li>
+                <li>42 – Bodas de Prata Dourada</li>
+                <li>43 – Bodas de Azeviche</li>
+                <li>44 – Bodas de Carbonato</li>
+                <li>45 – Bodas de Rubi</li>
+                <li>46 – Bodas de Alabastro</li>
+                <li>47 – Bodas de Jaspe</li>
+                <li>48 – Bodas de Granito</li>
+                <li>49 – Bodas de Heliotrópio</li>
+                <li>50 – Bodas de Ouro</li>
+                <li>51 – Bodas de Bronze</li>
+                <li>52 – Bodas de Argila</li>
+                <li>53 – Bodas de Antimônio</li>
+                <li>54 – Bodas de Níquel</li>
+                <li>55 – Bodas de Ametista</li>
+                <li>56 – Bodas de Malaquita</li>
+                <li>57 – Bodas de Lápis Lazuli</li>
+                <li>58 – Bodas de Vidro</li>
+                <li>59 – Bodas de Cereja</li>
+                <li>60 – Bodas de Diamante</li>
+                <li>61 – Bodas de Cobre</li>
+                <li>62 – Bodas de Telurita</li>
+                <li>63 – Bodas de Sândalo ou Lilás</li>
+                <li>64 – Bodas de Fabulita</li>
+                <li>65 – Bodas de Platina</li>
+                <li>66 – Bodas de Ébano</li>
+                <li>67 – Bodas de Neve</li>
+                <li>68 – Bodas de Chumbo</li>
+                <li>69 – Bodas de Mercúrio</li>
+                <li>70 – Bodas de Vinho</li>
+                <li>71 – Bodas de Zinco</li>
+                <li>72 – Bodas de Aveia</li>
+                <li>73 – Bodas de Manjerona</li>
+                <li>74 – Bodas de Macieira</li>
+                <li>75 – Bodas de Brilhante</li>
+                <li>76 – Bodas de Cipreste</li>
+                <li>77 – Bodas de Alfazema</li>
+                <li>78 – Bodas de Benjoim</li>
+                <li>79 – Bodas de Café</li>
+                <li>80 – Bodas de Nogueira ou Carvalho</li>
+                <li>81 – Bodas de Cacau</li>
+                <li>82 – Bodas de Cravo</li>
+                <li>83 – Bodas de Begônia</li>
+                <li>84 – Bodas de Crisântemo</li>
+                <li>85 – Bodas de Girassol</li>
+                <li>86 – Bodas de Hortênsia</li>
+                <li>87 – Bodas de Nogueira</li>
+                <li>88 – Bodas de Pêra</li>
+                <li>89 – Bodas de Figueira</li>
+                <li>90 – Bodas de Álamo</li>
+                <li>91 – Bodas de Pinheiro</li>
+                <li>92 – Bodas de Salgueiro</li>
+                <li>93 – Bodas de Imbuia</li>
+                <li>94 – Bodas de Palmeira</li>
+                <li>95 – Bodas de Sândalo</li>
+                <li>96 – Bodas de Oliveira</li>
+                <li>97 – Bodas de Abeto</li>
+                <li>98 – Bodas de Pinheiro</li>
+                <li>99 – Bodas de Salgueiro</li>
+                <li>100 – Bodas de Jequitibá</li>
+            </ul>            
+        </dialog>
+
         <div class="tempos">
             <div class="tempo">
                 <span id="anos"></span>

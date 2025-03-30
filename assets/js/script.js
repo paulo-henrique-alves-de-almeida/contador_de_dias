@@ -38,6 +38,22 @@ setTimeout(() => {
     });
 }, 100);
 
+// modal de informação
+const btnInfo = document.getElementById('btn-info');
+const modalInfo = document.querySelector('.modal-info');
+const btnFecharModal = document.getElementById('btn-fechar-info');
+
+btnInfo.addEventListener('click', () => {
+    modalInfo.showModal();
+    modalInfo.style.transform = 'scale(1)';
+});
+
+btnFecharModal.addEventListener('click', () => {
+    modalInfo.style.transform = 'scale(0)';
+    modalInfo.close();
+});
+
+
 // contador de dias
 const anos = document.getElementById('anos');
 const meses = document.getElementById('meses');
@@ -61,7 +77,7 @@ const contador = setInterval(function() {
     // contagem de bodas
     const bodas = document.getElementById('bodas');
 
-    if (mm <= 12) {
+    if (mm <= 11) {
         switch (mm) {
             case 1:
                 bodas.textContent = 'Bodas de Beijinhos';
@@ -92,9 +108,6 @@ const contador = setInterval(function() {
                 break;
             case 11:
                 bodas.textContent = 'Bodas de Chicletes';
-                break;
-            case 12:
-                bodas.textContent = 'Bodas de Papel';
                 break;
         };
     } else {
