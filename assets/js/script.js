@@ -62,23 +62,46 @@ const horas = document.getElementById('horas');
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
 
+const diasTotais = document.getElementById('dias-totais');
+const mesesTotais = document.getElementById('meses-totais');
+
 const comeco = new Date('mar 19, 2024 00:00:00');
 
 const contador = setInterval(function() {
-    let hoje = new Date().getTime();
-    let diff = hoje - comeco;
-    let aaaa = Math.floor(diff / (1000 * 3600 * 24 * 365));;
-    let mm = Math.floor(diff / (1000 * 3600 * 24 * 30));;
-    let dia = Math.floor(diff / (1000 * 3600 * 24));
+
+    let hoje = new Date();
+    let diff = hoje.getTime() - comeco;
+
+    let aaaa = hoje.getFullYear() - comeco.getFullYear();
+    let mm = hoje.getMonth() - comeco.getMonth();
+    let dia = hoje.getDate() - comeco.getDate();
     let h = Math.floor(diff % (1000 * 3600 * 24) /  (1000 * 3600));
     let min = Math.floor(diff % (1000 * 3600) / (1000 * 60));
     let s = Math.floor(diff % (1000 * 60) / 1000);
+
+    if (dia < 0) {
+        mm--;
+        const ultimoDiaMesAnterior = new Date(hoje.getFullYear(), hoje.getMonth(), 0).getDate();
+        dia += ultimoDiaMesAnterior;
+    }
+
+    if (mm < 0) {
+        aaaa--;
+        mm += 12;
+    }
+
+    let diffDias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    let diffMeses = (hoje.getFullYear() - comeco.getFullYear()) * 12 + (hoje.getMonth() - comeco.getMonth());
+
+    if (hoje.getDate() < comeco.getDate()) {
+        diffMeses--;
+    }
     
     // contagem de bodas
     const bodas = document.getElementById('bodas');
 
-    if (mm <= 11) {
-        switch (mm) {
+    if (diffMeses <= 11) {
+        switch (diffMeses) {
             case 1:
                 bodas.textContent = 'Bodas de Beijinhos';
                 break;
@@ -416,27 +439,27 @@ const contador = setInterval(function() {
     }
     
     // exibindo o tempo
-    if(aaaa < 10) {
+    if (aaaa < 10) {
         aaaa = '0' + aaaa;
     }
 
-    if(mm < 10) {
+    if (mm < 10) {
         mm = '0' + mm;
     }
 
-    if(dia < 10) {
+    if (dia < 10) {
         dia = '0' + dia;
     }
 
-    if(h < 10) {
+    if (h < 10) {
         h = '0' + h;
     }
 
-    if(min < 10) {
+    if (min < 10) {
         min = '0' + min;
     }
 
-    if(s < 10) {
+    if (s < 10) {
         s = '0' + s;
     }
 
@@ -446,5 +469,8 @@ const contador = setInterval(function() {
     horas.textContent = `${h}`;
     minutos.textContent = `${min}`;
     segundos.textContent = `${s}`;
+
+    diasTotais.textContent = `${diffDias}`;
+    mesesTotais.textContent = `${diffMeses}`;
 
 }, 1000);

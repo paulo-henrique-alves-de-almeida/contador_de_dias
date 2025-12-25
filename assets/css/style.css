@@ -179,7 +179,9 @@ body::-webkit-scrollbar-thumb,
 #dias,
 #horas,
 #minutos,
-#segundos {
+#segundos,
+#dias-totais,
+#meses-totais {
     font-size: 60px;
 }
 
@@ -199,11 +201,6 @@ body::-webkit-scrollbar-thumb,
     border-radius: 5px;
     padding: 2rem;
     line-height: 1.5;
-}
-
-.obs {
-    font-weight: bold;
-    color: var(--roxo-claro);
 }
 
 /* media queries */
