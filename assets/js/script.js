@@ -53,6 +53,13 @@ btnFecharModal.addEventListener('click', () => {
     modalInfo.close();
 });
 
+// elementos dos spans
+const spanAnos = document.getElementById('span-anos');
+const spanMeses = document.getElementById('span-meses');
+const spanDias = document.getElementById('span-dias');
+const spanHoras = document.getElementById('span-horas');
+const spanMinutos = document.getElementById('span-minutos');
+const spanSegundos = document.getElementById('span-segundos');
 
 // contador de dias
 const anos = document.getElementById('anos');
@@ -98,8 +105,84 @@ const contador = setInterval(function() {
     }
     
     // contagem de bodas
-    const bodas = document.getElementById('bodas');
+    verificarBodas(diffMeses, aaaa);
 
+    // corrigindo a concordância
+    if (aaaa > 1) {
+        spanAnos.textContent = "Anos";
+    } else {
+        spanAnos.textContent = "Ano";
+    }
+
+    if (mm > 1) {
+        spanMeses.textContent = "Meses";
+    } else {
+        spanMeses.textContent = "Mês";
+    }
+
+    if (dia > 1) {
+        spanDias.textContent = "Dias";
+    } else {
+        spanDias.textContent = "Dia";
+    }
+
+    if (h > 1) {
+        spanHoras.textContent = "Horas";
+    } else {
+        spanHoras.textContent = "Hora";
+    }
+
+    if (min > 1) {
+        spanMinutos.textContent = "Minutos";
+    } else {
+        spanMinutos.textContent = "Minuto";
+    }
+
+    if (s > 1) {
+        spanSegundos.textContent = "Segundos";
+    } else {
+        spanSegundos.textContent = "Segundo";
+    }
+    
+    // exibindo o tempo com
+    if (aaaa < 10) {
+        aaaa = '0' + aaaa;
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+
+    if (dia < 10) {
+        dia = '0' + dia;
+    }
+
+    if (h < 10) {
+        h = '0' + h;
+    }
+
+    if (min < 10) {
+        min = '0' + min;
+    }
+
+    if (s < 10) {
+        s = '0' + s;
+    }
+
+    anos.textContent = `${aaaa}`;
+    meses.textContent = `${mm}`;
+    dias.textContent = `${dia}`;
+    horas.textContent = `${h}`;
+    minutos.textContent = `${min}`;
+    segundos.textContent = `${s}`;
+
+    diasTotais.textContent = `${diffDias}`;
+    mesesTotais.textContent = `${diffMeses}`;
+
+}, 1000);
+
+function verificarBodas(diffMeses, aaaa) {
+    const bodas = document.getElementById('bodas');
     if (diffMeses <= 11) {
         switch (diffMeses) {
             case 1:
@@ -437,40 +520,4 @@ const contador = setInterval(function() {
                 break;
         }
     }
-    
-    // exibindo o tempo
-    if (aaaa < 10) {
-        aaaa = '0' + aaaa;
-    }
-
-    if (mm < 10) {
-        mm = '0' + mm;
-    }
-
-    if (dia < 10) {
-        dia = '0' + dia;
-    }
-
-    if (h < 10) {
-        h = '0' + h;
-    }
-
-    if (min < 10) {
-        min = '0' + min;
-    }
-
-    if (s < 10) {
-        s = '0' + s;
-    }
-
-    anos.textContent = `${aaaa}`;
-    meses.textContent = `${mm}`;
-    dias.textContent = `${dia}`;
-    horas.textContent = `${h}`;
-    minutos.textContent = `${min}`;
-    segundos.textContent = `${s}`;
-
-    diasTotais.textContent = `${diffDias}`;
-    mesesTotais.textContent = `${diffMeses}`;
-
-}, 1000);
+}
